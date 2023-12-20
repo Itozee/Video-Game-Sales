@@ -6,5 +6,7 @@ Publisher
 ,COUNT(Name) AS 'Highest Number Of Games'
 FROM vg_sales
 WHERE Genre = 'Sports'
-GROUP BY Publisher;
+GROUP BY Publisher
+ORDER BY COUNT(Name) DESC
+LIMIT 1;
 ```
